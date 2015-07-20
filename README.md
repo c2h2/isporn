@@ -1,6 +1,8 @@
 # Isporn
 
-TODO: Write a gem description
+Detect if your picture(s) is pornographic by AI, powered by https://exadeep.com. 
+
+Mid 2015 Correction rate > 90%
 
 ## Installation
 
@@ -18,12 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'isporn'
 
-## Contributing
+    '/path/to/test.jpg'.isporn?
 
-1. Fork it ( http://github.com/<my-github-username>/isporn/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+returns:
+
+    # or => normal
+    # or => sexy
+    # or => porn
+
+## Limited free use
+
+1. only 1000 picture per IP per day.
+
+## Register and obtain your API key.
+https://exadeep.com

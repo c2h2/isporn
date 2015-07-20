@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Isporn::VERSION
   spec.authors       = ["Yiling Cao"]
   spec.email         = ["yiling.cao@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{ Auto Porn Detection}
+  spec.description   = %q{Detect if your picture(s) is pornographic by AI, powered by https://exadeep.com.}
+  spec.homepage      = "https://github.com/c2h2/isporn"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,9 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  #spec.add_dependency "rest-client", ">= 1.8.0"
+  spec.add_runtime_dependency 'rest-client', '~> 1.8', '>= 1.8.0'
+  
   spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "~> 0"
 end
