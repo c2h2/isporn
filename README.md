@@ -22,7 +22,7 @@ Or install it yourself as:
 
     require 'isporn'
 
-    '/path/to/test.jpg'.isporn?
+    puts '/path/to/test.jpg'.isporn?
 
 returns:
 
