@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'isporn'
+
+if ARGV.size == 1
+  fn = ARGV[0]
+  puts fn.isporn?
+  exit 0
+else
+  puts 'Usage: isporn filename.jpg'
+  exit 1
+end

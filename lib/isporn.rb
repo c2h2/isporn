@@ -1,4 +1,5 @@
 require 'rest-client'
+require 'mini_magick'
 require 'json'
 
 module Isporn
@@ -33,7 +34,14 @@ class String
   end
 
   def is_porn?
-    res = Isporn.exadeep_api_rest_post self
+    temp_fn = "_temp.jpeg"
+    image =  MiniMagick::Image.open(self)
+    image.resize "270x270"
+    image.format "jpeg"
+    image.write temp_fn
+    res = Isporn.exadeep_api_rest_post temp_fn
+    File.delete temp_fn
+    
     j=JSON.parse(res)
     j["results"].first["scores"].first["label"]
   end
