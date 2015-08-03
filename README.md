@@ -29,6 +29,14 @@ returns:
     # or => normal
     # or => sexy
     # or => porn
+    
+    
+## CLI mode Usage:
+
+    $> isporn "/path/to/file.jpg".isporn?
+
+returns
+    porn
 
 ## Limited free use
 
