@@ -23,20 +23,23 @@ Or install it yourself as:
     require 'isporn'
 
     puts '/path/to/test.jpg'.isporn?
+or
+
+    puts 'http://example.com/image.jpg'.isporn?
 
 returns:
 
     # or => normal
     # or => sexy
     # or => porn
-    
+    # or => car_normal (cartoon)
+    # or => car_porn (cartoon)
     
 ## CLI mode Usage:
 
     $> isporn "/path/to/file.jpg".isporn?
-
-returns
-    porn
+or
+    $> isporn http://example.com/image.jpg
 
 ## Limited free use
 
